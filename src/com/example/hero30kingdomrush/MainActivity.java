@@ -2,21 +2,7 @@ package com.example.hero30kingdomrush;
 
 
 
-import org.andengine.engine.camera.Camera;  
-import org.andengine.engine.options.EngineOptions;  
-import org.andengine.engine.options.ScreenOrientation;  
-import org.andengine.engine.options.resolutionpolicy.RatioResolutionPolicy;  
-import org.andengine.entity.Entity;  
-import org.andengine.entity.scene.Scene;  
-import org.andengine.entity.sprite.Sprite;  
-import org.andengine.entity.text.Text;  
-import org.andengine.opengl.font.Font;  
-import org.andengine.opengl.font.FontFactory;  
-import org.andengine.opengl.texture.TextureOptions;  
-import org.andengine.opengl.texture.atlas.bitmap.BitmapTextureAtlas;  
-import org.andengine.opengl.texture.atlas.bitmap.BitmapTextureAtlasTextureRegionFactory;  
-import org.andengine.opengl.texture.region.ITextureRegion;  
-import org.andengine.ui.activity.SimpleBaseGameActivity;  
+
   
 import android.graphics.Color;  
 import android.opengl.GLES20;  
