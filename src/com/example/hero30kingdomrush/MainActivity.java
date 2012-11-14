@@ -103,6 +103,7 @@ public class MainActivity extends SimpleBaseGameActivity {
                  tiledTextureRegion, this.getVertexBufferObjectManager());
          
          sprite.animate(100);
+       //  sprite.animate(new long[]{100,100,100,100,100,100,100,100,100,100,100,100,100,100}, 38, 51, true);
          
          //sprite.a
         // sprite.
@@ -112,7 +113,7 @@ public class MainActivity extends SimpleBaseGameActivity {
          
          fireManSprite.Appeare();
          
-        // this.mScene.attachChild(fireManSprite);
+         this.mScene.attachChild(fireManSprite);
          
          this.mScene.attachChild(sprite);
         
