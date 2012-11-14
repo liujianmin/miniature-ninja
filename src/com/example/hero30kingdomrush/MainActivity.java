@@ -103,7 +103,16 @@ public class MainActivity extends SimpleBaseGameActivity {
                  tiledTextureRegion, this.getVertexBufferObjectManager());
          
          sprite.animate(100);
+         
+         //sprite.a
         // sprite.
+         FireManSprite fireManSprite = new FireManSprite((CAMERA_WIDTH - tiledTextureRegion.getWidth()) / 2-100,
+                 (CAMERA_HEIGHT - tiledTextureRegion.getHeight()) / 2,
+                 tiledTextureRegion, this.getVertexBufferObjectManager());
+         
+         fireManSprite.Appeare();
+         
+        // this.mScene.attachChild(fireManSprite);
          
          this.mScene.attachChild(sprite);
         
