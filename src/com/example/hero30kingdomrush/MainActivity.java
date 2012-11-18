@@ -6,7 +6,11 @@ package com.example.hero30kingdomrush;
   
 import android.graphics.Color;
 import android.opengl.GLES20;
+import android.widget.Toast;
 
+
+
+import org.andengine.engine.camera.BoundCamera;
 import org.andengine.engine.camera.Camera;
 import org.andengine.engine.options.EngineOptions;
 import org.andengine.engine.options.ScreenOrientation;
@@ -22,6 +26,14 @@ import org.andengine.extension.texturepacker.opengl.texture.util.texturepacker.T
 import org.andengine.extension.texturepacker.opengl.texture.util.texturepacker.TexturePackTextureRegionLibrary;
 import org.andengine.extension.texturepacker.opengl.texture.util.texturepacker.TexturePackerTextureRegion;
 import org.andengine.extension.texturepacker.opengl.texture.util.texturepacker.exception.TexturePackParseException;
+import org.andengine.extension.tmx.TMXLayer;
+import org.andengine.extension.tmx.TMXLoader;
+import org.andengine.extension.tmx.TMXProperties;
+import org.andengine.extension.tmx.TMXTile;
+import org.andengine.extension.tmx.TMXTileProperty;
+import org.andengine.extension.tmx.TMXTiledMap;
+import org.andengine.extension.tmx.TMXLoader.ITMXTilePropertiesListener;
+import org.andengine.extension.tmx.util.exception.TMXLoadException;
 import org.andengine.opengl.font.Font;
 import org.andengine.opengl.font.FontFactory;
 import org.andengine.opengl.texture.TextureOptions;
@@ -41,16 +53,21 @@ public class MainActivity extends SimpleBaseGameActivity {
     private static final int LAYER_BACKGROUND = 0;  
     private static final int LAYER_TEXT = LAYER_BACKGROUND + 1;  
   
-    private Scene mScene;  
   
-    private Font mFont;  
-    private BitmapTextureAtlas mBackgroundTexture;  
-    private ITextureRegion mBackgroundTextureRegion;  
+
+    
+    private BoundCamera mBoundChaseCamera;
+
+    protected int mCactusCount;
       
-    private Text mHelloText;  
+
   
     public EngineOptions onCreateEngineOptions() {  
         Camera mCamera = new Camera(0, 0, CAMERA_WIDTH, CAMERA_HEIGHT);  
+        
+        this.mBoundChaseCamera = new BoundCamera(0, 0, CAMERA_WIDTH, CAMERA_HEIGHT);
+        
+        
         final EngineOptions engineOptions = new EngineOptions(true,  
                 ScreenOrientation.LANDSCAPE_FIXED, new RatioResolutionPolicy(  
                         CAMERA_WIDTH, CAMERA_HEIGHT), mCamera);  
@@ -59,91 +76,46 @@ public class MainActivity extends SimpleBaseGameActivity {
   
     @Override  
     public void onCreateResources(){  
-        /* Load the font we are going to use. */  
-        FontFactory.setAssetBasePath("font/");  
-        this.mFont = FontFactory.createFromAsset(this.getFontManager(),  
-                this.getTextureManager(), 512, 512, TextureOptions.BILINEAR,  
-                this.getAssets(), "Plok.ttf", 32, true, Color.WHITE);  
-        this.mFont.load();  
+        
+        // andengine's engine
+        Constants.mEngine = this.mEngine;
+        // application context
+        Constants.mContext = this;
+        // load game settings
+        Settings.load();
+        // load pictures & sound
+        Assets.load();
+        
   
-        BitmapTextureAtlasTextureRegionFactory.setAssetBasePath("gfx/");  
-        /* Load all the textures this game needs. */  
-        this.mBackgroundTexture = new BitmapTextureAtlas(  
-                this.getTextureManager(), 800, 480);  
-        this.mBackgroundTextureRegion = BitmapTextureAtlasTextureRegionFactory  
-                .createFromAsset(this.mBackgroundTexture, this, "snake_background.png",  
-                        0, 0);  
-        this.mBackgroundTexture.load();  
     }  
   
     @Override  
     public Scene onCreateScene(){  
-        this.mScene = new Scene();  
-        for (int i = 0; i < LAYER_COUNT; i++) {  
-            this.mScene.attachChild(new Entity());  
-        }  
+       MapScene mapScene = new MapScene(); 
+
+
+
+
+        /* Make the camera not exceed the bounds of the TMXEntity. */
+  //      this.mBoundChaseCamera.setBounds(0, 0, tmxLayer.getHeight(), tmxLayer.getWidth());
+  //      this.mBoundChaseCamera.setBoundsEnabled(true);
   
-        /* No background color needed as we have a fullscreen background sprite. */  
-    //    this.mScene.setBackgroundEnabled(false);  
-        mScene.setBackground(new Background(1, 1, 1));
-      //  this.mScene.getChildByIndex(LAYER_BACKGROUND).attachChild(  
-      //          new Sprite(0, 0, this.mBackgroundTextureRegion, this  
-       //                 .getVertexBufferObjectManager()));  
+
           
-        this.mHelloText=new Text(CAMERA_WIDTH/2 - 80, CAMERA_HEIGHT/2 - 16, this.mFont, "Hello World !", this.getVertexBufferObjectManager());  
-        this.mHelloText.setBlendFunction(GLES20.GL_SRC_ALPHA, GLES20.GL_ONE_MINUS_SRC_ALPHA);  
-        this.mHelloText.setAlpha(0.6f);  
-        this.mScene.getChildByIndex(LAYER_TEXT).attachChild(this.mHelloText);  
+
         
-        TiledTextureRegion tiledTextureRegion = getTiledTextureFromPack("fireman");
-         
-         
-         AnimatedSprite sprite = new AnimatedSprite((CAMERA_WIDTH - tiledTextureRegion.getWidth()) / 2,
-                 (CAMERA_HEIGHT - tiledTextureRegion.getHeight()) / 2,
-                 tiledTextureRegion, this.getVertexBufferObjectManager());
-         
-         sprite.animate(100);
-       //  sprite.animate(new long[]{100,100,100,100,100,100,100,100,100,100,100,100,100,100}, 38, 51, true);
-         
-         //sprite.a
-        // sprite.
-         FireManSprite fireManSprite = new FireManSprite((CAMERA_WIDTH - tiledTextureRegion.getWidth()) / 2-100,
-                 (CAMERA_HEIGHT - tiledTextureRegion.getHeight()) / 2,
-                 tiledTextureRegion, this.getVertexBufferObjectManager());
-         
-         fireManSprite.Appeare();
-         
-         this.mScene.attachChild(fireManSprite);
-         
-         this.mScene.attachChild(sprite);
         
-          
-        return this.mScene;  
+         
+         
+
+
+         
+        
+        return mapScene;
+         
+
     } 
     
-    private TiledTextureRegion getTiledTextureFromPack(String name) {
-        TexturePackTextureRegionLibrary packer =null;
-        TexturePack spritesheetTexturePack = null;
-        try {
-            spritesheetTexturePack = new TexturePackLoader(this.getTextureManager(), "gfx/")
-                    .loadFromAsset(getAssets(), name + ".xml");
-            spritesheetTexturePack.loadTexture();
-            packer = spritesheetTexturePack.getTexturePackTextureRegionLibrary();
-        } catch (final TexturePackParseException e) {
-            Debug.e(e);
-        }
 
-        TexturePackerTextureRegion[] obj = new TexturePackerTextureRegion[packer
-                .getIDMapping().size()];
-
-        for (int i = 0; i < packer.getIDMapping().size(); i++) {
-            obj[i] = packer.get(i);
-        }
-
-        TiledTextureRegion texture = new TiledTextureRegion(spritesheetTexturePack.getTexture(),
-                obj);
-
-        return texture;
-    }
       
 }  

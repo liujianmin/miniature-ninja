@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<texture version="1" file="sheep.png" type="bitmap" width="256" height="256" pixelformat="RGBA_8888" minfilter="linear" magfilter="linear" wrapt="clamp" wraps="clamp" premultiplyalpha="false">
+    <!-- Created with TexturePacker http://texturepacker.com -->
+    <!--  -->
+    <textureregion id="0" src="image9357.png" x="210" y="145" width="25" height="25" rotated="false" trimmed="false" srcx="0" srcy="0" srcwidth="25" srcheight="25"/>
+    <textureregion id="1" src="image9359.png" x="190" y="170" width="25" height="25" rotated="false" trimmed="false" srcx="0" srcy="0" srcwidth="25" srcheight="25"/>
+    <textureregion id="2" src="image9361.png" x="185" y="145" width="25" height="25" rotated="false" trimmed="false" srcx="0" srcy="0" srcwidth="25" srcheight="25"/>
+    <textureregion id="3" src="image9363.png" x="220" y="120" width="25" height="25" rotated="false" trimmed="false" srcx="0" srcy="0" srcwidth="25" srcheight="25"/>
+    <textureregion id="4" src="image9365.png" x="195" y="120" width="25" height="25" rotated="false" trimmed="false" srcx="0" srcy="0" srcwidth="25" srcheight="25"/>
+    <textureregion id="5" src="image9367.png" x="170" y="210" width="25" height="25" rotated="false" trimmed="false" srcx="0" srcy="0" srcwidth="25" srcheight="25"/>
+    <textureregion id="6" src="image9369.png" x="165" y="185" width="25" height="25" rotated="false" trimmed="false" srcx="0" srcy="0" srcwidth="25" srcheight="25"/>
+    <textureregion id="7" src="image9371.png" x="160" y="160" width="25" height="25" rotated="false" trimmed="false" srcx="0" srcy="0" srcwidth="25" srcheight="25"/>
+    <textureregion id="8" src="image9373.png" x="160" y="135" width="25" height="25" rotated="false" trimmed="false" srcx="0" srcy="0" srcwidth="25" srcheight="25"/>
+    <textureregion id="9" src="image9375.png" x="145" y="210" width="25" height="25" rotated="false" trimmed="false" srcx="0" srcy="0" srcwidth="25" srcheight="25"/>
+    <textureregion id="10" src="image9377.png" x="140" y="185" width="25" height="25" rotated="false" trimmed="false" srcx="0" srcy="0" srcwidth="25" srcheight="25"/>
+    <textureregion id="11" src="image9379.png" x="120" y="125" width="25" height="25" rotated="false" trimmed="false" srcx="0" srcy="0" srcwidth="25" srcheight="25"/>
+    <textureregion id="12" src="image9381.png" x="120" y="225" width="25" height="25" rotated="false" trimmed="false" srcx="0" srcy="0" srcwidth="25" srcheight="25"/>
+    <textureregion id="13" src="image9383.png" x="115" y="200" width="25" height="25" rotated="false" trimmed="false" srcx="0" srcy="0" srcwidth="25" srcheight="25"/>
+    <textureregion id="14" src="image9385.png" x="95" y="225" width="25" height="25" rotated="false" trimmed="false" srcx="0" srcy="0" srcwidth="25" srcheight="25"/>
+    <textureregion id="15" src="image9387.png" x="110" y="100" width="25" height="25" rotated="false" trimmed="false" srcx="0" srcy="0" srcwidth="25" srcheight="25"/>
+    <textureregion id="16" src="image9389.png" x="85" y="100" width="25" height="25" rotated="false" trimmed="false" srcx="0" srcy="0" srcwidth="25" srcheight="25"/>
+    <textureregion id="17" src="image9391.png" x="90" y="200" width="25" height="25" rotated="false" trimmed="false" srcx="0" srcy="0" srcwidth="25" srcheight="25"/>
+    <textureregion id="18" src="image9393.png" x="70" y="225" width="25" height="25" rotated="false" trimmed="false" srcx="0" srcy="0" srcwidth="25" srcheight="25"/>
+    <textureregion id="19" src="image9395.png" x="65" y="200" width="25" height="25" rotated="false" trimmed="false" srcx="0" srcy="0" srcwidth="25" srcheight="25"/>
+    <textureregion id="20" src="image9397.png" x="45" y="225" width="25" height="25" rotated="false" trimmed="false" srcx="0" srcy="0" srcwidth="25" srcheight="25"/>
+    <textureregion id="21" src="image9399.png" x="40" y="200" width="25" height="25" rotated="false" trimmed="false" srcx="0" srcy="0" srcwidth="25" srcheight="25"/>
+    <textureregion id="22" src="image9401.png" x="225" y="25" width="25" height="25" rotated="false" trimmed="false" srcx="0" srcy="0" srcwidth="25" srcheight="25"/>
+    <textureregion id="23" src="image9403.png" x="45" y="30" width="45" height="30" rotated="false" trimmed="false" srcx="0" srcy="0" srcwidth="45" srcheight="30"/>
+    <textureregion id="24" src="image9405.png" x="0" y="225" width="45" height="30" rotated="false" trimmed="false" srcx="0" srcy="0" srcwidth="45" srcheight="30"/>
+    <textureregion id="25" src="image9407.png" x="180" y="0" width="45" height="30" rotated="false" trimmed="false" srcx="0" srcy="0" srcwidth="45" srcheight="30"/>
+    <textureregion id="26" src="image9409.png" x="135" y="0" width="45" height="30" rotated="false" trimmed="false" srcx="0" srcy="0" srcwidth="45" srcheight="30"/>
+    <textureregion id="27" src="image9411.png" x="90" y="0" width="45" height="30" rotated="false" trimmed="false" srcx="0" srcy="0" srcwidth="45" srcheight="30"/>
+    <textureregion id="28" src="image9413.png" x="45" y="0" width="45" height="30" rotated="false" trimmed="false" srcx="0" srcy="0" srcwidth="45" srcheight="30"/>
+    <textureregion id="29" src="image9415.png" x="0" y="0" width="45" height="30" rotated="false" trimmed="false" srcx="0" srcy="0" srcwidth="45" srcheight="30"/>
+    <textureregion id="30" src="image9419.png" x="120" y="150" width="40" height="35" rotated="false" trimmed="false" srcx="0" srcy="0" srcwidth="40" srcheight="35"/>
+    <textureregion id="31" src="image9421.png" x="225" y="0" width="25" height="25" rotated="false" trimmed="false" srcx="0" srcy="0" srcwidth="25" srcheight="25"/>
+    <textureregion id="32" src="image9424.png" x="145" y="100" width="40" height="35" rotated="false" trimmed="false" srcx="0" srcy="0" srcwidth="40" srcheight="35"/>
+    <textureregion id="33" src="image9426.png" x="80" y="165" width="40" height="35" rotated="false" trimmed="false" srcx="0" srcy="0" srcwidth="40" srcheight="35"/>
+    <textureregion id="34" src="image9428.png" x="80" y="130" width="40" height="35" rotated="false" trimmed="false" srcx="0" srcy="0" srcwidth="40" srcheight="35"/>
+    <textureregion id="35" src="image9430.png" x="40" y="165" width="40" height="35" rotated="false" trimmed="false" srcx="0" srcy="0" srcwidth="40" srcheight="35"/>
+    <textureregion id="36" src="image9432.png" x="40" y="130" width="40" height="35" rotated="false" trimmed="false" srcx="0" srcy="0" srcwidth="40" srcheight="35"/>
+    <textureregion id="37" src="image9434.png" x="205" y="85" width="40" height="35" rotated="false" trimmed="false" srcx="0" srcy="0" srcwidth="40" srcheight="35"/>
+    <textureregion id="38" src="image9436.png" x="165" y="65" width="40" height="35" rotated="false" trimmed="false" srcx="0" srcy="0" srcwidth="40" srcheight="35"/>
+    <textureregion id="39" src="image9438.png" x="125" y="65" width="40" height="35" rotated="false" trimmed="false" srcx="0" srcy="0" srcwidth="40" srcheight="35"/>
+    <textureregion id="40" src="image9440.png" x="45" y="95" width="40" height="35" rotated="false" trimmed="false" srcx="0" srcy="0" srcwidth="40" srcheight="35"/>
+    <textureregion id="41" src="image9442.png" x="85" y="65" width="40" height="35" rotated="false" trimmed="false" srcx="0" srcy="0" srcwidth="40" srcheight="35"/>
+    <textureregion id="42" src="image9444.png" x="210" y="50" width="40" height="35" rotated="false" trimmed="false" srcx="0" srcy="0" srcwidth="40" srcheight="35"/>
+    <textureregion id="43" src="image9446.png" x="170" y="30" width="40" height="35" rotated="false" trimmed="false" srcx="0" srcy="0" srcwidth="40" srcheight="35"/>
+    <textureregion id="44" src="image9448.png" x="130" y="30" width="40" height="35" rotated="false" trimmed="false" srcx="0" srcy="0" srcwidth="40" srcheight="35"/>
+    <textureregion id="45" src="image9450.png" x="45" y="60" width="40" height="35" rotated="false" trimmed="false" srcx="0" srcy="0" srcwidth="40" srcheight="35"/>
+    <textureregion id="46" src="image9452.png" x="90" y="30" width="40" height="35" rotated="false" trimmed="false" srcx="0" srcy="0" srcwidth="40" srcheight="35"/>
+    <textureregion id="47" src="image9454.png" x="0" y="190" width="40" height="35" rotated="false" trimmed="false" srcx="0" srcy="0" srcwidth="40" srcheight="35"/>
+    <textureregion id="48" src="image9456.png" x="0" y="155" width="40" height="35" rotated="false" trimmed="false" srcx="0" srcy="0" srcwidth="40" srcheight="35"/>
+    <textureregion id="49" src="image9458.png" x="0" y="120" width="40" height="35" rotated="false" trimmed="false" srcx="0" srcy="0" srcwidth="40" srcheight="35"/>
+    <textureregion id="50" src="image9460.png" x="0" y="85" width="40" height="35" rotated="false" trimmed="false" srcx="0" srcy="0" srcwidth="40" srcheight="35"/>
+    <textureregion id="51" src="image9462.png" x="0" y="50" width="40" height="35" rotated="false" trimmed="false" srcx="0" srcy="0" srcwidth="40" srcheight="35"/>
+</texture>

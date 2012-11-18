@@ -5,5 +5,6 @@ public interface ISpriteActionInterface {
 	public void Appeare();
 	public void Disappeare();
 	public void Attack();
+	public void setSpeed(int x,int y);
 
 }
