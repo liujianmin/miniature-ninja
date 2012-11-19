@@ -57,19 +57,9 @@ public class MapScene extends Scene {
                 Assets.herotiledTextureRegion, Constants.mEngine.getVertexBufferObjectManager()); 
 		final PhysicsHandler physicsHandler = new PhysicsHandler(heroSprite);
 		heroSprite.registerUpdateHandler(physicsHandler);
-		//physicsHandler.set
-
-       // ISpriteActionInterface actionInterface = fireManSprite;     
-       // actionInterface.Appeare(); 
         heroSprite.setScale(2);
-       // heroSprite.animate(100);
-      //  animate(new long[]{100,100,100,100,100,100,100,100,100}, 28, 36, true);
         heroSprite.Runnable();
-        
         physicsHandler.setVelocityX(-100);
-      //  heroSprite.Attack();
-       // heroSprite.setRotationCenterX(heroSprite.getX());
-        //heroSprite.setFlippedHorizontal(true);
         this.attachChild(heroSprite);
         
         
@@ -99,42 +89,36 @@ public class MapScene extends Scene {
 				int dx = (int) (sheepsprite.getX()-heroSprite.getX());
 				int dy = (int) (sheepsprite.getY()-heroSprite.getY());
 				
-			//	int d = (int) Math.sqrt(dx*dx+dy*dy);
-				
-/*				Log.d("aaaa", "sheepsprite.getX()= " +sheepsprite.getX());
-				
-				Log.d("aaaa", "sheepsprite.getY()= " +sheepsprite.getY());
-				
-				Log.d("aaaa", "heroSprite.getX()= " +heroSprite.getX());
-				Log.d("aaaa", "heroSprite.getY()= " +heroSprite.getY());
-				Log.d("aaaa", d +" = d");
+/*				int d = (int) Math.sqrt(dx*dx+dy*dy);
+				if (d < 10) {
+                    physicsHandler.setVelocity(0);
+                    return;
+                }*/
 
-				
-				
-				
-				Log.d("aaaa", dx +" = dx");*/
 				if(Math.abs(dx) > 150)				
 				physicsHandler.setVelocityX(dx > 0 ? 150 : -150);
 				else {
-					physicsHandler.setVelocityX(dx);
+					//physicsHandler.setVelocityX(dx > 0 ? 40 : -40);
+				    physicsHandler.setVelocityX(dx );
 				}
-			//	Log.d("aaaa", dy +" = dy");
 				if(Math.abs(dy) > 150)
 				physicsHandler.setVelocityY(dy > 0 ? 150: -150);
 				else
-					physicsHandler.setVelocityY(dy);
-				
-				
-				
-				
+					//physicsHandler.setVelocityY(dy > 0 ? 40 : -40);
+				    physicsHandler.setVelocityY(dy );
+								
 				final float[] playerFootCordinates = heroSprite.convertLocalToSceneCoordinates(12, 31);
 
 				/* Get the tile the feet of the player are currently waking on. */
 				final TMXTile tmxTile =  tmxLayer.getTMXTileAt(playerFootCordinates[0], playerFootCordinates[1]);
+				 Log.d("aaaa", "tmxTile.getTileY() = "+tmxTile.getTileY()+" tmxTile.getTileX() = "+tmxTile.getTileX());
 				if(tmxTile != null) {
-					Log.d("aaaa", "tmxTile.getTileX() = "+tmxTile.getTileX()+"tmxTile.getTileY() ="+tmxTile.getTileX());
-					// tmxTile.setTextureRegion(null); <-- Rubber-style removing of tiles =D
-					//currentTileRectangle.setPosition(tmxTile.getTileX(), tmxTile.getTileY());
+				    if(tmxTile.getTileY() <60 && tmxTile.getTileX() < 10)
+				    {
+				       
+				        Constants.mEngine.setScene(new  BattleScene());
+				    }
+				        
 				}
 				
 			}
