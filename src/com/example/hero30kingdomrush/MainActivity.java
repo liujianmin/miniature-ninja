@@ -92,26 +92,8 @@ public class MainActivity extends SimpleBaseGameActivity {
     @Override  
     public Scene onCreateScene(){  
        MapScene mapScene = new MapScene(); 
-
-
-
-
-        /* Make the camera not exceed the bounds of the TMXEntity. */
-  //      this.mBoundChaseCamera.setBounds(0, 0, tmxLayer.getHeight(), tmxLayer.getWidth());
-  //      this.mBoundChaseCamera.setBoundsEnabled(true);
-  
-
-          
-
         
-        
-         
-         
-
-
-         
-        
-        return mapScene;
+        return new BattleScene();
          
 
     } 
