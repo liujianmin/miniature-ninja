@@ -106,6 +106,14 @@ public class MapScene extends Scene {
 				else
 					//physicsHandler.setVelocityY(dy > 0 ? 40 : -40);
 				    physicsHandler.setVelocityY(dy );
+				
+				
+				if(dx > 0)
+					heroSprite.setFlippedHorizontal(false);
+				else {
+					heroSprite.setFlippedHorizontal(true);
+				}
+				
 								
 				final float[] playerFootCordinates = heroSprite.convertLocalToSceneCoordinates(12, 31);
 

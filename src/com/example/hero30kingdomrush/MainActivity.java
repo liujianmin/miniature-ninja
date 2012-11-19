@@ -94,7 +94,7 @@ public class MainActivity extends SimpleBaseGameActivity {
        MapScene mapScene = new MapScene(); 
         
         return new BattleScene();
-         
+        // return mapScene;
 
     } 
     
